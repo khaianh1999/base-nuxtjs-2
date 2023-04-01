@@ -23,3 +23,12 @@ body {
 .box__shadow {
     box-shadow: 0px 2px 15px rgba(219, 203, 192, 0.3);
 }
+.scrollbar-style::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+.scrollbar-style::-webkit-scrollbar-thumb {
+    background: #e5e5e5;
+    border-radius: 10px;
+}

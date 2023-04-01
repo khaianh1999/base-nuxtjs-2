@@ -5,65 +5,67 @@
                 Học viên của chúng tôi
             </h3>
             <div class="mt-6">
-                <carousel
-                    :items="3"
-                    :autoplay="true"
-                    :nav="false"
-                    :loop="true"
-                    :margin="24"
-                    :autoplay-hover-pause="true"
-                    :autoplay-timeout="5000"
-                >
-                    <div
-                        v-for="(item, index) in 6"
-                        :key="index"
-                        class="our-student-item"
+                <no-ssr>
+                    <v-carousel
+                        :items="3"
+                        :autoplay="true"
+                        :nav="false"
+                        :loop="true"
+                        :margin="24"
+                        :autoplay-hover-pause="true"
+                        :autoplay-timeout="5000"
                     >
-                        <div class="relative overflow-hidden shadow-md">
-                            <div class="px-5">
-                                <div>
+                        <div
+                            v-for="(item, index) in 6"
+                            :key="index"
+                            class="our-student-item"
+                        >
+                            <div class="relative overflow-hidden shadow-md">
+                                <div class="px-5">
+                                    <div>
+                                        <img
+                                            src="@/assets/images/quotation.png"
+                                            alt=""
+                                            class="quotation"
+                                        />
+                                    </div>
+                                    <div
+                                        class="pt-5 text-center text-[#252525] font-normal text-base"
+                                    >
+                                        Lorem ipsum dolor sit amet,consectetur
+                                        adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna ..
+                                    </div>
+                                    <div
+                                        class="text-[#252525] font-bold text-base text-right mt-8"
+                                    >
+                                        Duy Tùng - 6.0 IELTS
+                                    </div>
+                                </div>
+                                <div class="-mt-12">
+                                    <div class="cicle"></div>
                                     <img
-                                        src="@/assets/images/quotation.png"
+                                        src="@/assets/images/teacher.png"
                                         alt=""
-                                        class="quotation"
+                                        class="relative z-30"
                                     />
                                 </div>
-                                <div
-                                    class="pt-5 text-center text-[#252525] font-normal text-base"
-                                >
-                                    Lorem ipsum dolor sit amet,consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna ..
-                                </div>
-                                <div
-                                    class="text-[#252525] font-bold text-base text-right mt-8"
-                                >
-                                    Duy Tùng - 6.0 IELTS
-                                </div>
-                            </div>
-                            <div class="-mt-12">
-                                <div class="cicle"></div>
-                                <img
-                                    src="@/assets/images/teacher.png"
-                                    alt=""
-                                    class="relative z-30"
-                                />
                             </div>
                         </div>
-                    </div>
-                </carousel>
+                    </v-carousel>
+                </no-ssr>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import carousel from "vue-owl-carousel";
+// import carousel from "vue-owl-carousel";
 
 export default {
     name: "VhWebIeltsFeOurStudents",
 
-    components: { carousel },
+    // components: { carousel },
 
     data() {
         return {};

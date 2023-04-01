@@ -6,7 +6,7 @@ export default {
         host: "0.0.0.0",
         port: 8009,
     },
-    ssr: false,
+    ssr: true,
     target: "server",
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
@@ -32,7 +32,14 @@ export default {
     },
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: ["~/plugins/repositories.js", "plugins/i18n.js"],
+    plugins: [
+        "~/plugins/repositories.js",
+        "plugins/i18n.js",
+        { src: "~/plugins/carousel.js", ssr: false },
+        { src: "~/plugins/vue-validate.js", mode: "client" },
+        { src: "~/plugins/vue-otp-input.js", mode: "client" },
+        { src: "~plugins/vs-pagination", ssr: false },
+    ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,

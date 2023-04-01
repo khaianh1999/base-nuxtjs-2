@@ -34,8 +34,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-7">
-                        <div>
+                    <div class="col-span-7 relative">
+                        <div class="relative z-30">
                             <div class="text-center">
                                 <div
                                     class="bg-advisor rounded-full w-[337px] h-[337px] flex items-center justify-center overflow-hidden mx-auto"
@@ -85,6 +85,9 @@
                                     />
                                 </div>
                             </div>
+                        </div>
+                        <div class="bg-advisor-light">
+                            <img src="@/assets/images/advisor.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -160,6 +163,13 @@ export default {
             width: 128px;
             height: 128px;
         }
+    }
+    .bg-advisor-light {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 150%;
+        transform: translate(-17%, -18%);
     }
 }
 </style>
